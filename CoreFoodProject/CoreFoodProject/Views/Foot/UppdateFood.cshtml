@@ -1,0 +1,31 @@
+﻿@model Foot
+
+@{
+    ViewData["Title"] = "UppdateFood";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form form-group">
+    @Html.TextBoxFor(x => x.FootId, new { @class = "form-control", @type = "hidden" })
+    @Html.Label("İsim")
+    @Html.TextBoxFor(x => x.FootName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fiyat")
+    @Html.TextBoxFor(x => x.FootPrice, new { @class = "form-control" })
+    <br />
+    @Html.Label("Resim Adresi")
+    @Html.TextBoxFor(x => x.FootImageURl, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.FootStock, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategory")
+    @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.CategoryList, "Select a category", new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+

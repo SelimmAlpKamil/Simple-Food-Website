@@ -1,0 +1,35 @@
+﻿@model Foot
+@{
+    ViewData["Title"] = "AddFoot";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form form-group">
+    
+    @Html.Label("İsim")
+    @Html.TextBoxFor(x=>x.FootName, new{@class="form-control"})
+    @Html.ValidationMessageFor(x => x.FootName, "", new { @style = "color:red;" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Description, "", new { @style = "color:red;" })
+    <br />
+    @Html.Label("Fiyat")
+    @Html.TextBoxFor(x => x.FootPrice, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FootPrice, "", new { @style = "color:red;" })
+    <br />
+    @Html.Label("Resim Adresi")
+    @Html.TextBoxFor(x => x.FootImageURl, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FootImageURl, "", new { @style = "color:red;" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.FootStock, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.FootStock, "", new { @style = "color:red;" })
+    <br />
+    @Html.Label("Kategory")
+    @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.CategoryList, "Kategori seçin", new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryId, "", new { @style = "color:red;" })
+    <br />
+   <button class="btn btn-primary">Ekle</button>
+</form>
+

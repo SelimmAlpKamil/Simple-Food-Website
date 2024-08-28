@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Foot>
+
+
+@{
+    ViewData["Title"] = "GetCategoryFoot";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ürün Ad</th>
+        <th>Ürün Açıklama</th>
+        <th>Ürün Fiyat</th>
+        <th>Ürün Resim uzantısı</th>
+        <th>Ürün Stok</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CategoryId</td>
+            <td>@x.FootName</td>
+            <td>@x.Description</td>
+            <td>@x.FootPrice</td>
+            <td>@x.FootImageURl</td>
+            <td>@x.FootStock</td>
+        </tr>
+    }
+</table>
+
+
+
+
+

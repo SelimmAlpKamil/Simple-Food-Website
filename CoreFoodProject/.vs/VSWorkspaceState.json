@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CoreFoodProject",
+    "\\CoreFoodProject\\Controllers",
+    "\\CoreFoodProject\\Models",
+    "\\CoreFoodProject\\Views",
+    "\\CoreFoodProject\\Views\\Category",
+    "\\CoreFoodProject\\Views\\Foot",
+    "\\CoreFoodProject\\Views\\User",
+    "\\CoreFoodProject\\Views\\User\\Components",
+    "\\CoreFoodProject\\Views\\User\\Components\\FoodGetList"
+  ],
+  "SelectedNode": "\\CoreFoodProject.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,18 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "UppdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control",@type="hidden" })
+    @Html.Label("Kategory İsmi")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategory Açıklamsı")
+    @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+

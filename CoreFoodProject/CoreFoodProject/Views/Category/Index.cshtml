@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <p>
+        kategori ismi: @Html.TextBox("p")
+        <input value="ara" type="submit" />
+
+    </p>
+    
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kategori Adı</th>
+        <th>Kategori Açıklaması</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Ürünler</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CategoryId</td>
+            <td>@x.CategoryName</td>
+            <td>@x.CategoryDescription</td>
+            <td>
+                <a class="btn btn-danger" href="/Category/DeleteCategory/@x.CategoryId">Sil</a>
+            </td>
+            <td>
+                <a class="btn btn-warning" href="/Category/UppdateCategory/@x.CategoryId">Güncelle</a>
+            </td>
+            <td>
+                <a class="btn alert-info" href="/Category/GetCategoryFoot/@x.CategoryId">Ürünler</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a class="btn alert-success" href="/Category/AddCategory">Ekle</a>

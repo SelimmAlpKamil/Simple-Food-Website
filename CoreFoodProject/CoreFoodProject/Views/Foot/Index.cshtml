@@ -1,0 +1,47 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+
+@model IEnumerable<Foot>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered"> 
+    <tr>
+        <th>Id</th>
+        <th>İsiim</th>
+        <th>Açıklama</th>
+        <th>Fiyat</th>
+        <th>Resim uzantısı</th>
+        <th>Stok</th>
+        <th>Kastegory ID</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.FootId</td>
+            <td>@x.FootName</td>
+            <td>@x.Description</td>
+            <td>@x.FootPrice</td>
+            <td>@x.FootImageURl</td>
+            <td>@x.FootStock</td>
+            <td>@x.Category.CategoryName</td>
+            <td>
+                <a href="/Foot/DeleteFood/@x.FootId" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Foot/UppdateFood/@x.FootId" class="btn btn-warning">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index", new {page}))
+
+<a href="/Foot/AddFoot" class="btn btn-primary">Ekle</a>
+
