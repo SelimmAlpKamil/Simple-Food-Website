@@ -63,8 +63,12 @@ Here is a detailed README for your repository **Simple-Food-Website**:
 
 ## Screenshots
 
-
-
+![image](https://github.com/user-attachments/assets/a96a1203-ef80-4110-9687-b1820ea6f01d)
+![image](https://github.com/user-attachments/assets/e55f5817-9930-45dd-9939-a451e7dc794a)
+![image](https://github.com/user-attachments/assets/e03845c3-8ad3-4250-8036-810430b0070e)
+![image](https://github.com/user-attachments/assets/18d7428a-56b8-4276-9394-210e06d82907)
+![image](https://github.com/user-attachments/assets/2ed2186b-5c84-43a3-9898-8b82b55415d7)
+![image](https://github.com/user-attachments/assets/47d78bdd-3755-4515-8c27-855a11677926)
 
 
 ## Contributors
